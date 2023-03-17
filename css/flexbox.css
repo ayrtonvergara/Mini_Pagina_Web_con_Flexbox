@@ -1,0 +1,140 @@
+/* .headerPrincipal-titulo{     otra forma de hacerlo...
+    display:inline-block;
+    vertical-align: middle;
+}*/
+.headerPrincipal .container {
+    display: flex;
+    /*este comando se ocupa para que un elemento quede al lado de otro*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%;
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video{
+    flex-grow: 2;
+    flex-shrink: 2;
+    
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-contatoForm-submit {
+    margin-left: 3%;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    /*esto se ocupa cuando queremos cambiar de filas(row) a columnas*/
+    height: 250px;
+    /*la altura que tendra nuestras columnas*/
+    flex-wrap: wrap;
+    /*esto se ocupa para que cuando llegue a 250px, se pase a la otra columna*/
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+
+    /*@media(mediaquery) se ocupa para diferentes pantallas responsive,
+    768px se coloca porque es el maximo para una tablet*/
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+
+    }
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+    .videoSobre .container{
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+    .headerPrincipal-nav-link-app{ /* con esto se puede ordenar el item en primer lugar(nuestra app), ya que todos los archivos flexbox empiezan desde el 0*/
+        order: -1;
+    }
+    
+}
